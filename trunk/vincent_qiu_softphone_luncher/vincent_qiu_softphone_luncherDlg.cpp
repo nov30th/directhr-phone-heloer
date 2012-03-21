@@ -426,4 +426,9 @@ void Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton1()
 		MessageBox(_T("Active successful!"),_T("Active SIP Click Call"),4096+64);
 		}*/
 	}
+
+		/*
+		Open Google Chrome to install plugin */
+		MessageBox(L"In the next window, please install the telephone plugin in Google Chrome!",_T("Google Chrome Plugin Installer"),4096+64);
+		ShellExecute(NULL,L"open",L"chrome.exe",L"https://chrome.google.com/webstore/detail/mapjclclndigebgobdncmlhmpmnhmpma",NULL,0);
 }
