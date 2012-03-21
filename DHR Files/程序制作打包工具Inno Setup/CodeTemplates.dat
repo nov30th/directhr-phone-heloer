@@ -1,0 +1,189 @@
+arrayd
+=array[0..|] of ;
+arrayc
+=array[0..|] of = ();
+cases
+=case | of
+=  : ;
+=  : ;
+=end;
+casee
+=case | of
+=  : ;
+=  : ;
+=else ;
+=end;
+fors
+=for | :=  to  do
+forb
+=for | :=  to  do
+=begin
+=
+=end;
+func
+=function |(): ;
+=begin
+=
+=end;
+ifs
+=if | then
+ifb
+=if | then
+=begin
+=
+=end;
+ife
+=if | then
+=
+=else
+ifeb
+=if | then
+=begin
+=
+=end
+=else
+=begin
+=
+=end;
+proc
+=procedure |();
+=begin
+=
+=end;
+trye
+=try
+=  |
+=except
+=
+=end;
+tryf
+=try
+=  |
+=finally
+=
+=end;
+trycf
+=|variable := typename.Create;
+=try
+=
+=finally
+=  variable.Free;
+=end;
+whileb
+=while | do
+=begin
+=
+=end;
+whiles
+=while | do
+withb
+=with | do
+=begin
+=
+=end;
+withs
+=with | do
+InitSetup
+=function InitializeSetup(): Boolean;
+=begin
+=  |
+=end;
+InitWizard
+=procedure InitializeWizard();
+=begin
+=  |
+=end;
+DeinitSetup
+=procedure DeinitializeSetup();
+=begin
+=  |
+=end;
+CurStepChg
+=procedure CurStepChanged(CurStep: TSetupStep);
+=begin
+=  |
+=end;
+NextBtnClk
+=function NextButtonClick(CurPageID: Integer): Boolean;
+=begin
+=  |
+=end;
+BackBtnClk
+=function BackButtonClick(CurPageID: Integer): Boolean;
+=begin
+=  |
+=end;
+CancelBtnClk
+=procedure CancelButtonClick(CurPageID: Integer; var Cancel, Confirm: Boolean);
+=begin
+=  |
+=end;
+ShouldSkipPage
+=function ShouldSkipPage(PageID: Integer): Boolean;
+=begin
+=  |
+=end;
+CurPageChg
+=procedure CurPageChanged(CurPageID: Integer);
+=begin
+=  |
+=end;
+ChkPassword
+=function CheckPassword(Password: String): Boolean;
+=begin
+=  |
+=end;
+NeedRest
+=function NeedRestart(): Boolean;
+=begin
+=  |
+=end;
+UpdateReadyMemo
+=function UpdateReadyMemo(Space, NewLine, MemoUserInfoInfo, MemoDirInfo, MemoTypeInfo, MemoComponentsInfo, MemoGroupInfo, MemoTasksInfo: String): String;
+=begin
+=  |
+=end;
+RegPrevData
+=procedure RegisterPreviousData(PreviousDataKey: Integer);
+=begin
+=  |
+=end;
+ChkSerial
+=function CheckSerial(Serial: String): Boolean;
+=begin
+=  |
+=end;
+GetCusSetupExitCode
+=function GetCustomSetupExitCode: Integer;
+=begin
+=  |
+=end;
+InitUninst
+=function InitializeUninstall(): Boolean;
+=begin
+=  |
+=end;
+DeinitUninst
+=procedure DeinitializeUninstall();
+=begin
+=  |
+=end;
+CurUninstStepChg
+=procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+=begin
+=  |
+=end;
+UninsNeedRest
+=function UninstallNeedRestart(): Boolean;
+=begin
+=  |
+=end;
+MsgInfo
+=MsgBox('|', mbInformation, MB_OK);
+MsgConf
+=if MsgBox('|', mbConfirmation, MB_YESNO) = IDYES then
+=begin
+=
+=end;
+MsgErr
+=MsgBox('|', mbError, MB_OK);

@@ -1,0 +1,19 @@
+ ╭══════════════╮
+ ║                            ║
+ ║        日游杀毒网          ║
+ ║   http://www.riyou.com     ║
+ ║                            ║
+ ╰══════════════╯
+
+免费安装程序制作打包工具Inno Setup 5.3.9汉化绿色版_完美支持pascal脚本 
+
+免费安装程序制作打包工具Inno Setup 是一个免费的安装制作软件，小巧、简便、精美是其最大特点，支持pascal脚本，能快速制作出标准Windows2000风格的安装界面，足以完成一般安装任务。该软件用Delphi写成，其官方网站同时也提供源程序免费下载。它虽不能与Installshield这类恐龙级的安装制作软件相比，但也当之无愧算是后起之秀。
+
+包含Ansi和Unicode版本。 
+加入加密组件ISCrypt.dll。 
+加入Inno Setup预处理器。(可选择安装) 
+加入一些辅助工具。(可选择安装) 
+
+注意：可能部分杀毒软件误报，请用户注意判断，建议关闭杀毒软件监控后使用。
+
+
