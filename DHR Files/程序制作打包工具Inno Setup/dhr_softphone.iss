@@ -8,7 +8,7 @@
 #define MyAppCrack "Active Softphone"
 #define MyAppCrackExeName "vincent_qiu_softphone_luncher.exe"
 #define MyAgent "Softphone Agent"
-#define MyAppAgentExeName "DirectHRSoftphoneAgent_QZJ.exe"
+#define MyAppAgentExeName "DHRSoftphone.SoftphoneAgent_QZJ"
 ;#define MyChromePlugin "plugins\dhr_dialer.crx"
 [Setup]
 ; 注: AppId的值为单独标识该应用程序。
