@@ -8,7 +8,7 @@
 #define MyAppCrack "Active Softphone"
 #define MyAppCrackExeName "vincent_qiu_softphone_luncher.exe"
 #define MyAgent "Softphone Agent"
-#define MyAppAgentExeName "DHRSoftphone.SoftphoneAgent_QZJ"
+#define MyAppAgentExeName "DHRSoftphone.SoftphoneAgent_QZJ.exe"
 ;#define MyChromePlugin "plugins\dhr_dialer.crx"
 [Setup]
 ; 注: AppId的值为单独标识该应用程序。
@@ -28,7 +28,7 @@ DisableDirPage=yes
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=..\Finished_Setup_Files
-OutputBaseFilename="softphone"
+OutputBaseFilename="setup"
 SetupIconFile=..\For_Installer\20110811125146294_easyicon_cn_48.ico
 Compression=lzma
 SolidCompression=yes
