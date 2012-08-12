@@ -1,0 +1,2 @@
+"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe" sign /n "zhongjie qiu" /t http://timestamp.verisign.com/scripts/timstamp.dll  /d "Direct HR Softphone Agent" /du "http://www.directhr.net" eyeBeam/DHRSoftphone.SoftphoneAgent_QZJ.exe
+pause

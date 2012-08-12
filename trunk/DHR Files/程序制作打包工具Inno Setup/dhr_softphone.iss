@@ -16,6 +16,10 @@
 ; (生成新的GUID，点击 工具|在IDE中生成GUID。)
 PrivilegesRequired=admin
 
+signtool=digitsign
+;sign /n $qzhongjie qiu$q /d "Direct HR Softphone Agent" /du "http://www.directhr.net" /t http://timestamp.verisign.com/scripts/timstamp.dll $f
+
+
 AppId={{8DF33044-AD82-4396-B2F2-67CB1C3019D8}
 AppName={#MyAppName}
 AppVerName={#MyAppVerName}
@@ -62,7 +66,8 @@ Filename: "{app}\{#MyAppCrackExeName}"; Description: "{cm:LaunchProgram,{#String
 Filename: "{app}\{#MyAppAgentExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAgent, "&", "&&")}}"; Flags: nowait postinstall
 ;Filename: "{app}\{#MyChromePlugin}"; Description: "{cm:LaunchProgram,{#StringChange("Install Chrome Plugin", "&", "&&")}}"; Flags: nowait postinstall
 
-
+[InstallDelete]
+Type: files; Name: "{userdocs}\AgentOptions.ini"
 
 [Code]
 //安装前判断是否有进程正在运行，istask.dll文件与打包的exe文件一起
