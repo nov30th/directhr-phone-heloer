@@ -4,7 +4,7 @@
 
 [Setup]
 AppName=My Program
-AppVerName=My Program version 1.5
+AppVersion=1.5
 CreateAppDir=no
 DisableProgramGroupPage=yes
 DefaultGroupName=My Program
@@ -153,7 +153,7 @@ begin
 
   ForceDirectories(VDir.Path);
   SaveStringToFile(VDir.Path + '/index.htm', '<html><body>Inno Setup rocks!</body></html>', False);
-  if not ShellExec('open', IISURL + '/innosetup/index.htm', '', '', SW_SHOWNORMAL, ewNoWait, ErrorCode) then
+  if not ShellExecAsOriginalUser('open', IISURL + '/innosetup/index.htm', '', '', SW_SHOWNORMAL, ewNoWait, ErrorCode) then
     MsgBox('Can''t display the created virtual directory: ''' + SysErrorMessage(ErrorCode) + '''.', mbError, mb_Ok);
 end;
 

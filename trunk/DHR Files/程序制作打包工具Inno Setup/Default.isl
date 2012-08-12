@@ -36,6 +36,10 @@ LastErrorMessage=%1.%n%n错误 %2: %3
 SetupFileMissing=安装目录中的文件 %1 丢失。请修正这个问题或获取一个新的程序副本。
 SetupFileCorrupt=安装文件被破坏。请获取一个新的程序副本。
 SetupFileCorruptOrWrongVer=安装文件被破坏，或是与这个安装程序的版本不兼容。请修正这个问题或获取新的程序副本。
+InvalidParameter=无效的命令行参数: %n%n%1
+SetupAlreadyRunning=安装程序正在运行。
+WindowsVersionNotSupported=这个程序不支持该版本的计算机运行。
+WindowsServicePackRequired=这个程序要求%1服务包%1或更高。
 NotOnThisPlatform=这个程序将不能运行于 %1。
 OnlyOnThisPlatform=这个程序必须运行于 %1。
 OnlyOnTheseArchitectures=这个程序只能在为下列处理器结构设计的 Windows 版本中进行安装:%n%n%1
@@ -126,7 +130,8 @@ SelectDirDesc=您想将 [name] 安装在什么地方？
 SelectDirLabel3=安装程序将安装 [name] 到下列文件夹中。
 SelectDirBrowseLabel=单击“下一步”继续。如果您想选择其它文件夹，单击“浏览”。
 DiskSpaceMBLabel=至少需要有 [mb] MB 的可用磁盘空间。
-ToUNCPathname=安装程序不能安装到一个 UNC 路径名。如果您正在尝试安装到网络，您需要映射一个网络驱动器。
+CannotInstallToNetworkDrive=安装程序无法安装到一个网络驱动器。
+CannotInstallToUNCPath=安装程序无法安装到一个UNC路径。
 InvalidPath=您必须输入一个带驱动器卷标的完整路径，例如:%n%nC:\APP%n%n或下列形式的 UNC 路径:%n%n\\server\share
 InvalidDrive=您选定的驱动器或 UNC 共享不存在或不能访问。请选选择其它位置。
 DiskSpaceWarningTitle=没有足够的磁盘空间
@@ -186,6 +191,10 @@ WizardPreparing=正在准备安装
 PreparingDesc=安装程序正在准备安装 [name] 到您的电脑中。
 PreviousInstallNotCompleted=先前程序的安装/卸载未完成。您需要重新启动您的电脑才能完成安装。%n%n在重新启动电脑后，再运行安装完成 [name] 的安装。
 CannotContinue=安装程序不能继续。请单击“取消”退出。
+ApplicationsFound=下列应用程序正在使用的文件需要更新设置。它是建议您允许安装程序自动关闭这些应用程序。
+ApplicationsFound2=下列应用程序正在使用的文件需要更新设置。它是建议您允许安装程序自动关闭这些应用程序。安装完成后，安装程序将尝试重新启动应用程序。
+CloseApplications=自动关闭该应用程序(&A)
+DontCloseApplications=不要关闭该应用程序(D)
 
 ; *** “正在安装”向导页
 WizardInstalling=正在安装
@@ -218,6 +227,7 @@ SetupAborted=安装程序未完成安装。%n%n请修正这个问题并重新运行安装程序。
 EntryAbortRetryIgnore=单击“重试”进行重试，单击“忽略”继续，或单击“中断”取消安装。
 
 ; *** 安装状态消息
+StatusClosingApplications=正在关闭应用程序...
 StatusCreateDirs=正在创建目录...
 StatusExtractFiles=正在解压缩文件...
 StatusCreateIcons=正在创建快捷方式...
@@ -226,6 +236,7 @@ StatusCreateRegistryEntries=正在创建注册表条目...
 StatusRegisterFiles=正在注册文件...
 StatusSavingUninstall=正在保存卸载信息...
 StatusRunProgram=正在完成安装...
+StatusRestartingApplications=正在重启应用程序...
 StatusRollback=正在撤销更改...
 
 ; *** 其它错误
@@ -289,6 +300,10 @@ SharedFileLocationLabel=位置:
 WizardUninstalling=卸载状态
 StatusUninstalling=正在卸载 %1...
 
+; *** Shutdown block reasons
+ShutdownBlockReasonInstallingApp=正在安装 %1.
+ShutdownBlockReasonUninstallingApp=正在卸载 %1.
+
 ; The custom messages below aren't used by Setup itself, but if you make
 ; use of them in your scripts, you'll want to translate them.
 
@@ -303,3 +318,7 @@ UninstallProgram=卸载 %1
 LaunchProgram=运行 %1
 AssocFileExtension=将 %2 文件扩展名与 %1 建立关联(&A)
 AssocingFileExtension=正在将 %2 文件扩展名与 %1 建立关联...
+AutoStartProgramGroupDescription=启动组:
+AutoStartProgram=自动启动 %1
+AddonHostProgramNotFound=%1无法找到您所选择的文件夹。%n%n你想继续吗？
+

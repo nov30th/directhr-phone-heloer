@@ -1,11 +1,11 @@
 ; -- Components.iss --
 ; Demonstrates a components-based installation.
 
-; 有关创建 Inno Setup 脚本文件的详细资料请查阅帮助文档！
+; SEE THE DOCUMENTATION FOR DETAILS ON CREATING .ISS SCRIPT FILES!
 
 [Setup]
 AppName=My Program
-AppVerName=My Program version 1.5
+AppVersion=1.5
 DefaultDirName={pf}\My Program
 DefaultGroupName=My Program
 UninstallDisplayIcon={app}\MyProg.exe

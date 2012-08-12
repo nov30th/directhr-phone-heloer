@@ -11,7 +11,7 @@
 
 [Setup]
 AppName=My Program
-AppVerName=My Program version 1.5
+AppVersion=1.5
 CreateAppDir=no
 DisableProgramGroupPage=yes
 DefaultGroupName=My Program
