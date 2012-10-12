@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="9.4" version="9.4" Modules="professional" RootPath="." Language="en" Id="{20D14566-61F1-4454-A02B-60CCD6638E90}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiValidationComponent">
+    <ROW Table="File" Column="Sequence" MinValue="1" MaxValue="32767" Description="Sequence with respect to the media images; order must track cabinet order." Options="0" ColumnType="2" ColumnIndex="7" ColumnSize="2" MsiKey="File#Sequence"/>
+    <ROW Table="Media" Column="LastSequence" MinValue="0" MaxValue="32767" Description="File sequence number for the last file for this media." Options="0" ColumnType="2" ColumnIndex="1" ColumnSize="2" MsiKey="Media#LastSequence"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_CLEAN_RESOURCES_DISABLE_UPGRADE" Value="1"/>
+    <ROW Property="AI_CLEAN_RESOURCES_UNINSTALL" Value="1"/>
+    <ROW Property="AI_CLEAN_RESOURCES_USER_PROMPT_BASIC_UI" Value="0"/>
+    <ROW Property="AI_CLEAN_RESOURCES_USER_PROMPT_FULL_UI" Value="0"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_MINDOTNETVERSION" MultiBuildValue="DefaultBuild:4.0" ValueLocId="-"/>
+    <ROW Property="AI_ThemeStyle" Value="default" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPCONTACT" Value="Vincent Qiu"/>
+    <ROW Property="ARPHELPLINK" Value="http://www.directhr.cn"/>
+    <ROW Property="ARPHELPTELEPHONE" Value="+86 574 88487007"/>
+    <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPNOREPAIR" Value="1"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="ARPURLINFOABOUT" Value="http://www.directhr.net"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="http://www.directhr.net"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{426E6BA8-39F1-41CB-99BF-2D4151DEC968} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="DirectHR Softphone Agent" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.1.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Emoticons_Dir" Directory_Parent="APPDIR" DefaultDir="Emotic~1|Emoticons"/>
+    <ROW Directory="Plugins_Dir" Directory_Parent="APPDIR" DefaultDir="Plugins"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AEC_PC_DLL.dll" ComponentId="{87CA1CA2-8215-4CC9-A294-6F9FBF1CA51D}" Directory_="APPDIR" Attributes="0" KeyPath="AEC_PC_DLL.dll"/>
+    <ROW Component="AI_ExePath" ComponentId="{F5C61973-C188-462A-A6E8-A9BE8D1DD51D}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="BV32.dll" ComponentId="{78BD6999-A5CF-4FE8-9534-3D93DEE40589}" Directory_="APPDIR" Attributes="0" KeyPath="BV32.dll"/>
+    <ROW Component="DHRSoftphone.AgentExceptions.dll" ComponentId="{5DF27EB4-8373-4731-9C4A-3D8D5BEFCE75}" Directory_="APPDIR" Attributes="0" KeyPath="DHRSoftphone.AgentExceptions.dll"/>
+    <ROW Component="DHRSoftphone.IDHRSPPlugin.dll" ComponentId="{DC1A7561-26E4-4A64-A079-B5D23C9C100A}" Directory_="APPDIR" Attributes="0" KeyPath="DHRSoftphone.IDHRSPPlugin.dll"/>
+    <ROW Component="DHRSoftphone.Plugins.AgentStatusUploader" ComponentId="{2B695AE5-A58C-4A03-BC0E-0146F46B4E43}" Directory_="Plugins_Dir" Attributes="0" KeyPath="DHRSoftphone.Plugins.AgentStatusUploader.dll"/>
+    <ROW Component="DHRSoftphone.Plugins.ProcessKiller.dll" ComponentId="{A4C10F6A-E2A6-4FBF-82F2-D358BCD6B9B4}" Directory_="Plugins_Dir" Attributes="0" KeyPath="DHRSoftphone.Plugins.ProcessKiller.dll"/>
+    <ROW Component="DHRSoftphone.SoftphoneAgent_QZJ.exe" ComponentId="{D189E025-B285-412E-9658-02C6D34214EB}" Directory_="APPDIR" Attributes="0" KeyPath="DHRSoftphone.SoftphoneAgent_QZJ.exe"/>
+    <ROW Component="DHRSoftphone.SoftphoneAgent_QZJ.vshost.e" ComponentId="{201BDAD8-B541-470E-9BE3-87EDCB375EB4}" Directory_="APPDIR" Attributes="0" KeyPath="DHRSoftphone.SoftphoneAgent_QZJ.vshost.exe"/>
+    <ROW Component="DirectHRSoftphoneAgent_QZJ.exe" ComponentId="{80B14A92-12EE-4B8E-93A6-D43FC1F67D63}" Directory_="APPDIR" Attributes="0" KeyPath="DirectHRSoftphoneAgent_QZJ.exe"/>
+    <ROW Component="G729AsDLL.dll" ComponentId="{D9678210-2269-4343-93DD-D7A7A27449A3}" Directory_="APPDIR" Attributes="0" KeyPath="G729AsDLL.dll"/>
+    <ROW Component="ISTask.dll" ComponentId="{85A9231B-674C-42EC-B07C-B8E4A3E56EF4}" Directory_="APPDIR" Attributes="0" KeyPath="ISTask.dll"/>
+    <ROW Component="PlantronicsDeviceEventSink.dll" ComponentId="{C7C9AC46-5AE8-41BB-92CB-8DEC78F2538F}" Directory_="APPDIR" Attributes="0" KeyPath="PlantronicsDeviceEventSink.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{F3E5624D-0675-4D02-ACEF-D21AD521E615}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="ProductName" ComponentId="{37123450-8FAA-4EEA-97A1-D35F197D434D}" Directory_="APPDIR" Attributes="4" KeyPath="ProductName_1"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{20FEFE5E-01E5-4FBA-BCB0-99CA573B9FC6}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SoftphoneAgent" ComponentId="{E1EA7238-165C-4F67-ADC2-8AAC0BB0445D}" Directory_="APPDIR" Attributes="4" KeyPath="SoftphoneAgent"/>
+    <ROW Component="TjIpSys.dll" ComponentId="{69A78975-546A-46D7-B640-BC52D3FB21AC}" Directory_="APPDIR" Attributes="0" KeyPath="TjIpSys.dll"/>
+    <ROW Component="YLUSBTEL.dll" ComponentId="{2A6E56F4-78C0-45BC-8FFF-917F2795306F}" Directory_="APPDIR" Attributes="0" KeyPath="YLUSBTEL.dll"/>
+    <ROW Component="cellphone_agentdatabase.dat" ComponentId="{091A836D-F60F-4AC6-9A71-0445913A0C25}" Directory_="APPDIR" Attributes="0" KeyPath="cellphone_agentdatabase.dat" Type="0"/>
+    <ROW Component="eyeBeam.exe" ComponentId="{50AE8046-0040-4EF3-9AC6-78D32B355E26}" Directory_="APPDIR" Attributes="0" KeyPath="eyeBeam.exe"/>
+    <ROW Component="eyeCall.dll" ComponentId="{554570AC-97D4-4BF6-B979-8B48497ECDFC}" Directory_="APPDIR" Attributes="0" KeyPath="eyeCall.dll"/>
+    <ROW Component="eyeLook.dll" ComponentId="{D26CCF87-BB46-4245-8101-96BA847C60CE}" Directory_="APPDIR" Attributes="0" KeyPath="eyeLook.dll"/>
+    <ROW Component="gif" ComponentId="{3626418A-1851-4B74-AC5F-E021131C02B4}" Directory_="Emoticons_Dir" Attributes="0" KeyPath="gif" Type="0"/>
+    <ROW Component="ipwio.dll" ComponentId="{2DA12D72-9AE8-4937-986C-27BDB1165FE1}" Directory_="APPDIR" Attributes="0" KeyPath="ipwio.dll"/>
+    <ROW Component="psvince.dll" ComponentId="{8B3AB349-C8BD-4B3A-A160-F2C2BAB2AAB8}" Directory_="APPDIR" Attributes="0" KeyPath="psvince.dll"/>
+    <ROW Component="ugstgs.exe" ComponentId="{D87CC5A0-DA79-4FF8-B35F-B4665F1E3E40}" Directory_="APPDIR" Attributes="0" KeyPath="ugstgs.exe"/>
+    <ROW Component="vincent_qiu_softphone_luncher.exe" ComponentId="{F675B04A-0CB2-40FA-86AC-72EEDA505C31}" Directory_="APPDIR" Attributes="0" KeyPath="vincent_qiu_softphone_luncher.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AEC_PC_DLL.dll AI_ExePath BV32.dll DHRSoftphone.AgentExceptions.dll DHRSoftphone.IDHRSPPlugin.dll DHRSoftphone.Plugins.AgentStatusUploader DHRSoftphone.Plugins.ProcessKiller.dll DHRSoftphone.SoftphoneAgent_QZJ.exe DHRSoftphone.SoftphoneAgent_QZJ.vshost.e DirectHRSoftphoneAgent_QZJ.exe G729AsDLL.dll ISTask.dll PlantronicsDeviceEventSink.dll ProductInformation ProductName SHORTCUTDIR SoftphoneAgent TjIpSys.dll YLUSBTEL.dll cellphone_agentdatabase.dat eyeBeam.exe eyeCall.dll eyeLook.dll gif ipwio.dll psvince.dll ugstgs.exe vincent_qiu_softphone_luncher.exe"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AEC_PC_DLL.dll" Component_="AEC_PC_DLL.dll" FileName="AEC_PC~1.dll|AEC_PC_DLL.dll" Attributes="0" SourcePath="..\eyeBeam\AEC_PC_DLL.dll" SelfReg="false" NextFile="BV32.dll"/>
+    <ROW File="BV32.dll" Component_="BV32.dll" FileName="BV32.dll" Attributes="0" SourcePath="..\eyeBeam\BV32.dll" SelfReg="false" NextFile="cellphone_agentdatabase.dat"/>
+    <ROW File="DHRSoftphone.AgentExceptions.dll" Component_="DHRSoftphone.AgentExceptions.dll" FileName="DHRSof~1.dll|DHRSoftphone.AgentExceptions.dll" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.AgentExceptions.dll" SelfReg="false" NextFile="DHRSoftphone.IDHRSPPlugin.dll"/>
+    <ROW File="DHRSoftphone.IDHRSPPlugin.dll" Component_="DHRSoftphone.IDHRSPPlugin.dll" FileName="DHRSof~2.dll|DHRSoftphone.IDHRSPPlugin.dll" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.IDHRSPPlugin.dll" SelfReg="false" NextFile="DHRSoftphone.SoftphoneAgent_QZJ.exe"/>
+    <ROW File="DHRSoftphone.Plugins.AgentStatusUploader.dll" Component_="DHRSoftphone.Plugins.AgentStatusUploader" FileName="DHRSof~2.dll|DHRSoftphone.Plugins.AgentStatusUploader.dll" Attributes="0" SourcePath="..\eyeBeam\Plugins\DHRSoftphone.Plugins.AgentStatusUploader.dll" SelfReg="false" NextFile="DHRSoftphone.Plugins.ProcessKiller.dll"/>
+    <ROW File="DHRSoftphone.Plugins.ProcessKiller.dll" Component_="DHRSoftphone.Plugins.ProcessKiller.dll" FileName="DHRSof~3.dll|DHRSoftphone.Plugins.ProcessKiller.dll" Attributes="0" SourcePath="..\eyeBeam\Plugins\DHRSoftphone.Plugins.ProcessKiller.dll" SelfReg="false" NextFile="psvince.dll"/>
+    <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.exe" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" FileName="DHRSof~1.exe|DHRSoftphone.SoftphoneAgent_QZJ.exe" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.exe" SelfReg="false" NextFile="DHRSoftphone.SoftphoneAgent_QZJ.exe.config"/>
+    <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.exe.config" Component_="cellphone_agentdatabase.dat" FileName="DHRSof~1.con|DHRSoftphone.SoftphoneAgent_QZJ.exe.config" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.exe.config" SelfReg="false" NextFile="gif"/>
+    <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.pdb" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" FileName="DHRSof~1.pdb|DHRSoftphone.SoftphoneAgent_QZJ.pdb" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.pdb" SelfReg="false" NextFile="DHRSoftphone.SoftphoneAgent_QZJ.vshost.exe"/>
+    <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.vshost.exe" Component_="DHRSoftphone.SoftphoneAgent_QZJ.vshost.e" FileName="DHRSof~2.exe|DHRSoftphone.SoftphoneAgent_QZJ.vshost.exe" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.vshost.exe" SelfReg="false"/>
+    <ROW File="DirectHRSoftphoneAgent_QZJ.exe" Component_="DirectHRSoftphoneAgent_QZJ.exe" FileName="Direct~1.exe|DirectHRSoftphoneAgent_QZJ.exe" Attributes="0" SourcePath="..\eyeBeam\DirectHRSoftphoneAgent_QZJ.exe" SelfReg="false" NextFile="DHRSoftphone.SoftphoneAgent_QZJ.pdb"/>
+    <ROW File="G729AsDLL.dll" Component_="G729AsDLL.dll" FileName="G729As~1.dll|G729AsDLL.dll" Attributes="0" SourcePath="..\eyeBeam\G729AsDLL.dll" SelfReg="false" NextFile="ipwio.dll"/>
+    <ROW File="ISTask.dll" Component_="ISTask.dll" FileName="ISTask.dll" Attributes="0" SourcePath="..\eyeBeam\ISTask.dll" SelfReg="false" NextFile="lic_code.txt"/>
+    <ROW File="PlantronicsDeviceEventSink.dll" Component_="PlantronicsDeviceEventSink.dll" FileName="Plantr~1.dll|PlantronicsDeviceEventSink.dll" Attributes="0" SourcePath="..\eyeBeam\PlantronicsDeviceEventSink.dll" SelfReg="false" NextFile="DHRSoftphone.Plugins.AgentStatusUploader.dll"/>
+    <ROW File="TjIpSys.dll" Component_="TjIpSys.dll" FileName="TjIpSys.dll" Attributes="0" SourcePath="..\eyeBeam\TjIpSys.dll" SelfReg="false" NextFile="ugstgs.exe"/>
+    <ROW File="YLUSBTEL.dll" Component_="YLUSBTEL.dll" FileName="YLUSBTEL.dll" Attributes="0" SourcePath="..\eyeBeam\YLUSBTEL.dll" SelfReg="false" NextFile="DirectHRSoftphoneAgent_QZJ.exe"/>
+    <ROW File="cellphone_agentdatabase.dat" Component_="cellphone_agentdatabase.dat" FileName="cellph~1.dat|cellphone_agentdatabase.dat" Attributes="0" SourcePath="..\eyeBeam\cellphone_agentdatabase.dat" SelfReg="false" NextFile="chromeplugin.html"/>
+    <ROW File="chromeplugin.html" Component_="cellphone_agentdatabase.dat" FileName="chrome~1.htm|chrome plugin.html" Attributes="0" SourcePath="..\eyeBeam\chrome plugin.html" SelfReg="false" NextFile="DHRSoftphone.AgentExceptions.dll"/>
+    <ROW File="eyeBeam.exe" Component_="eyeBeam.exe" FileName="eyeBeam.exe" Attributes="0" SourcePath="..\eyeBeam\eyeBeam.exe" SelfReg="false" NextFile="eyeCall.dll"/>
+    <ROW File="eyeCall.dll" Component_="eyeCall.dll" FileName="eyeCall.dll" Attributes="0" SourcePath="..\eyeBeam\eyeCall.dll" SelfReg="false" NextFile="eyeLook.dll"/>
+    <ROW File="eyeLook.dll" Component_="eyeLook.dll" FileName="eyeLook.dll" Attributes="0" SourcePath="..\eyeBeam\eyeLook.dll" SelfReg="false" NextFile="G729AsDLL.dll"/>
+    <ROW File="gif" Component_="gif" FileName="00.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\00.gif" SelfReg="false" NextFile="gif_1"/>
+    <ROW File="gif_1" Component_="gif" FileName="01.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\01.gif" SelfReg="false" NextFile="gif_2"/>
+    <ROW File="gif_10" Component_="gif" FileName="10.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\10.gif" SelfReg="false" NextFile="gif_11"/>
+    <ROW File="gif_11" Component_="gif" FileName="11.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\11.gif" SelfReg="false" NextFile="eyeBeam.exe"/>
+    <ROW File="gif_2" Component_="gif" FileName="02.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\02.gif" SelfReg="false" NextFile="gif_3"/>
+    <ROW File="gif_3" Component_="gif" FileName="03.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\03.gif" SelfReg="false" NextFile="gif_4"/>
+    <ROW File="gif_4" Component_="gif" FileName="04.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\04.gif" SelfReg="false" NextFile="gif_5"/>
+    <ROW File="gif_5" Component_="gif" FileName="05.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\05.gif" SelfReg="false" NextFile="gif_6"/>
+    <ROW File="gif_6" Component_="gif" FileName="06.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\06.gif" SelfReg="false" NextFile="gif_7"/>
+    <ROW File="gif_7" Component_="gif" FileName="07.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\07.gif" SelfReg="false" NextFile="gif_8"/>
+    <ROW File="gif_8" Component_="gif" FileName="08.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\08.gif" SelfReg="false" NextFile="gif_9"/>
+    <ROW File="gif_9" Component_="gif" FileName="09.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\09.gif" SelfReg="false" NextFile="gif_10"/>
+    <ROW File="ipwio.dll" Component_="ipwio.dll" FileName="ipwio.dll" Attributes="0" SourcePath="..\eyeBeam\ipwio.dll" SelfReg="false" NextFile="ISTask.dll"/>
+    <ROW File="lic_code.txt" Component_="cellphone_agentdatabase.dat" FileName="lic_code.txt" Attributes="0" SourcePath="..\eyeBeam\lic_code.txt" SelfReg="false" NextFile="PlantronicsDeviceEventSink.dll"/>
+    <ROW File="psvince.dll" Component_="psvince.dll" FileName="psvince.dll" Attributes="0" SourcePath="..\eyeBeam\psvince.dll" SelfReg="false" NextFile="rightclick_ie_dialDirectly.html"/>
+    <ROW File="rightclick_ie_dialDirectly.html" Component_="cellphone_agentdatabase.dat" FileName="rightc~1.htm|rightclick_ie_dialDirectly.html" Attributes="0" SourcePath="..\eyeBeam\rightclick_ie_dialDirectly.html" SelfReg="false" NextFile="rightclick_ie_dialwithZero.html"/>
+    <ROW File="rightclick_ie_dialwithZero.html" Component_="cellphone_agentdatabase.dat" FileName="rightc~2.htm|rightclick_ie_dialwithZero.html" Attributes="0" SourcePath="..\eyeBeam\rightclick_ie_dialwithZero.html" SelfReg="false" NextFile="rightclick_ie_editBeforeDial.html"/>
+    <ROW File="rightclick_ie_editBeforeDial.html" Component_="cellphone_agentdatabase.dat" FileName="rightc~3.htm|rightclick_ie_editBeforeDial.html" Attributes="0" SourcePath="..\eyeBeam\rightclick_ie_editBeforeDial.html" SelfReg="false" NextFile="TjIpSys.dll"/>
+    <ROW File="ugstgs.exe" Component_="ugstgs.exe" FileName="ugstgs.exe" Attributes="0" SourcePath="..\eyeBeam\ugstgs.exe" SelfReg="false" NextFile="uninstall.ico"/>
+    <ROW File="uninstall.ico" Component_="cellphone_agentdatabase.dat" FileName="uninst~1.ico|uninstall.ico" Attributes="0" SourcePath="..\eyeBeam\uninstall.ico" SelfReg="false" NextFile="vincent_qiu_softphone_luncher.exe"/>
+    <ROW File="vincent_qiu_softphone_luncher.exe" Component_="vincent_qiu_softphone_luncher.exe" FileName="vincen~1.exe|vincent_qiu_softphone_luncher.exe" Attributes="0" SourcePath="..\eyeBeam\vincent_qiu_softphone_luncher.exe" SelfReg="false" NextFile="welcome.rtf"/>
+    <ROW File="welcome.rtf" Component_="cellphone_agentdatabase.dat" FileName="welcome.rtf" Attributes="0" SourcePath="..\eyeBeam\welcome.rtf" SelfReg="false" NextFile="YLUSBTEL.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AiRemoveRegComponent">
+    <ROW RemoveReg="SoftphoneAgent" InstallMode="2" Condition="(AI_CLEAN_RESOURCES_UNINSTALL = &quot;1&quot;) AND (NOT UPGRADINGPRODUCTCODE)"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="..\Finished_Setup_Files" PackageFileName="setupnew" Languages="en" InstallationType="2" CabsLocation="1" CompressCabs="false" UseLzma="true" LzmaMethod="2" LzmaCompressionLevel="4" PackageType="1" FilesInsideExe="true" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" UseLargeSchema="true" ExeName="setupnew" UACExecutionLevel="2"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
+    <ROW TimeStampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" SignerDescription="Softphone Agent" DescriptionUrl="http://softphone.directhr.cn" SignOptions="7" SignTool="0" Thumbprint="a34f02902572b5c72f10e97134482fa891eb5e84 Subject: ZhongJie Qiu&#10;Issuer: StartCom Class 2 Primary Intermediate Object CA&#10;Valid from 01/03/2011 to 01/01/2013"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_AiRemoveRegsCommit" Description="Executing registry removal operations." Template="Removing registry entry: [1]" DescriptionLocId="ActionText.Description.AI_AiRemoveRegsCommit" TemplateLocId="ActionText.Template.AI_AiRemoveRegsCommit"/>
+    <ROW Action="AI_AiRemoveRegsDeferred" Description="Executing registry removal operations." Template="Removing registry entry: [1]" DescriptionLocId="ActionText.Description.AI_AiRemoveRegsDeferred" TemplateLocId="ActionText.Template.AI_AiRemoveRegsDeferred"/>
+    <ROW Action="AI_AiRemoveRegsImmediate" Description="Generating actions to remove registry entries." DescriptionLocId="ActionText.Description.AI_AiRemoveRegsImmediate"/>
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_DOTNET40_SEARCH" Signature_="AI_DotNet40SearchSgn" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="ResourceCleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ResourceCleaner.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AiRemoveRegsCommit" Type="11777" Source="ResourceCleaner.dll" Target="OnAiRemoveRegs" WithoutSeq="true"/>
+    <ROW Action="AI_AiRemoveRegsDeferred" Type="11265" Source="ResourceCleaner.dll" Target="OnAiRemoveRegs" WithoutSeq="true"/>
+    <ROW Action="AI_AiRemoveRegsImmediate" Type="1" Source="ResourceCleaner.dll" Target="OnAiRemoveRegsImmediate"/>
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="DirectHRSoftphoneAgent_QZJ.exe"/>
+    <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="eyeBeam.exe"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]\Softphone"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]\Direct HR Softphone"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+    <ROW Action="StopProcess_Eyebeam" Type="1" Source="aicustact.dll" Target="StopProcess" Options="3" AdditionalSeq="AI_DATA_SETTER_1"/>
+    <ROW Action="StopProcess_SoftphoneAgent" Type="1" Source="aicustact.dll" Target="StopProcess" Options="3" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="vincent_qiu_softphone_luncher.exe" Type="18" Source="vincent_qiu_softphone_luncher.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+    <ROW Action="AI_AppSearchEx" Sequence="102"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="StopProcess_SoftphoneAgent" Sequence="1604"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="1603"/>
+    <ROW Action="StopProcess_Eyebeam" Sequence="1602"/>
+    <ROW Action="AI_DATA_SETTER_1" Sequence="1601"/>
+    <ROW Action="AI_AiRemoveRegsImmediate" Sequence="2599"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+    <ROW Action="AI_AppSearchEx" Sequence="102"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+    <ROW Action="vincent_qiu_softphone_luncher.exe" Condition="( NOT Installed )" Sequence="1301"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(AI_DOTNET40_SEARCH = &quot;#1&quot;) OR (AI_DOTNET45_SEARCH &gt;= &quot;4.5&quot;)" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_MINDOTNETVERSION]" DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_DotNet40SearchSgn" Root="2" Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Install" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Path" Root="2" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName_1" Root="2" Key="Software\[Manufacturer]\[ProductName]" Name="*" Component_="ProductName"/>
+    <ROW Registry="SoftphoneAgent" Root="2" Key="Software\Microsoft\Windows\CurrentVersion\Run" Name="Softphone Agent" Value="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]" Component_="SoftphoneAgent"/>
+    <ROW Registry="Version" Root="2" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRemoveRegComponent">
+    <ROW RemoveRegistry="SoftphoneAgent" Root="2" Key="Software\Microsoft\Windows\CurrentVersion\Run" Name="Softphone Agent" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Softphone" Directory_="SHORTCUTDIR" Name="Softph~2|Softphone" Component_="eyeBeam.exe" Target="[#eyeBeam.exe]" Description="Softphone" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="SoftphoneAgent" Directory_="SHORTCUTDIR" Name="Softph~1|Softphone Agent" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" Target="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]" Description="Softphone Agent" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="SoftphoneAgent_1" Directory_="DesktopFolder" Name="Softph~1|Softphone Agent" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" Target="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]" Description="Softphone Agent" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="SoftphonePatch" Directory_="SHORTCUTDIR" Name="Softph~3|Softphone Patch" Component_="vincent_qiu_softphone_luncher.exe" Target="[#vincent_qiu_softphone_luncher.exe]" Description="Softphone Patch" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD" DisplayName=".NET Framework 4.0" VersionMin="4.0" SetupFileUrl="http://softphone.directhr.cn/dotnetfx40.exe" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2" Operator="1"/>
+    <ATTRIBUTE name="PrereqsOrder" value="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD_NET_40_SEARCH" Prereq="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Version" VerMin="4.0" Order="1" Property="AI_NET_40_ORIGINAL_PREREQSEARCH_PROP"/>
+    <ROW SearchKey="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD_NET_45_SEARCH" Prereq="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Version" VerMin="4.5" Order="2" Property="AI_NET_40_45_PREREQSEARCH_PROP"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="APPDIR" SourcePath="..\eyeBeam" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+  </COMPONENT>
+</DOCUMENT>
