@@ -15,12 +15,15 @@
     <ROW Property="AI_FrameColor" Value="powderblue" MultiBuildValue="DefaultBuild:deepskyblue" MsiKey="AI_FrameColor"/>
     <ROW Property="AI_ImagesColor" Value="powderblue" MultiBuildValue="DefaultBuild:aquamarine" MsiKey="AI_ImagesColor"/>
     <ROW Property="AI_MINDOTNETVERSION" MultiBuildValue="DefaultBuild:4.0" ValueLocId="-"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="DirectHR Softphone Agent"/>
     <ROW Property="AI_ThemeStyle" Value="head" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPCONTACT" Value="Vincent Qiu"/>
     <ROW Property="ARPHELPLINK" Value="http://www.directhr.cn"/>
     <ROW Property="ARPHELPTELEPHONE" Value="+86 574 88487007"/>
+    <ROW Property="ARPSIZE" Value="0"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="ARPURLINFOABOUT" Value="http://www.directhr.net"/>
     <ROW Property="ARPURLUPDATEINFO" Value="http://www.directhr.net"/>
@@ -41,11 +44,13 @@
     <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="Deskto~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="Emoticons_Dir" Directory_Parent="APPDIR" DefaultDir="Emotic~1|Emoticons"/>
     <ROW Directory="Plugins_Dir" Directory_Parent="APPDIR" DefaultDir="Plugins"/>
+    <ROW Directory="ProgramFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="Progra~1|ProgramFilesFolder" IsPseudoRoot="1"/>
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="AEC_PC_DLL.dll" ComponentId="{87CA1CA2-8215-4CC9-A294-6F9FBF1CA51D}" Directory_="APPDIR" Attributes="0" KeyPath="AEC_PC_DLL.dll"/>
+    <ROW Component="AI_CustomARPName" ComponentId="{91818D0A-4F68-4806-96A2-B315EBD5E560}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
     <ROW Component="AI_ExePath" ComponentId="{F5C61973-C188-462A-A6E8-A9BE8D1DD51D}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
     <ROW Component="BV32.dll" ComponentId="{78BD6999-A5CF-4FE8-9534-3D93DEE40589}" Directory_="APPDIR" Attributes="0" KeyPath="BV32.dll"/>
     <ROW Component="DHRSoftphone.AgentExceptions.dll" ComponentId="{5DF27EB4-8373-4731-9C4A-3D8D5BEFCE75}" Directory_="APPDIR" Attributes="0" KeyPath="DHRSoftphone.AgentExceptions.dll"/>
@@ -78,7 +83,7 @@
     <ROW Component="vincent_qiu_softphone_luncher.exe" ComponentId="{F675B04A-0CB2-40FA-86AC-72EEDA505C31}" Directory_="APPDIR" Attributes="0" KeyPath="vincent_qiu_softphone_luncher.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AEC_PC_DLL.dll AI_ExePath BV32.dll DHRSoftphone.AgentExceptions.dll DHRSoftphone.Eyebeam.dll DHRSoftphone.IDHRSPPlugin.dll DHRSoftphone.Plugins.AgentStatusUploader DHRSoftphone.Plugins.ProcessKiller.dll DHRSoftphone.SoftphoneAgent_QZJ.exe DHRSoftphone.SoftphoneAgent_QZJ.vshost.e DirectHRSoftphoneAgent_QZJ.exe G729AsDLL.dll ISTask.dll PlantronicsDeviceEventSink.dll ProductInformation ProductName Run SHORTCUTDIR SoftphoneAgent SoftphoneAgentx86 TjIpSys.dll YLUSBTEL.dll cellphone_agentdatabase.dat eyeBeam.exe eyeCall.dll eyeLook.dll gif ipwio.dll psvince.dll ugstgs.exe vincent_qiu_softphone_luncher.exe"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AEC_PC_DLL.dll AI_CustomARPName AI_ExePath BV32.dll DHRSoftphone.AgentExceptions.dll DHRSoftphone.Eyebeam.dll DHRSoftphone.IDHRSPPlugin.dll DHRSoftphone.Plugins.AgentStatusUploader DHRSoftphone.Plugins.ProcessKiller.dll DHRSoftphone.SoftphoneAgent_QZJ.exe DHRSoftphone.SoftphoneAgent_QZJ.vshost.e DirectHRSoftphoneAgent_QZJ.exe G729AsDLL.dll ISTask.dll PlantronicsDeviceEventSink.dll ProductInformation ProductName Run SHORTCUTDIR SoftphoneAgent SoftphoneAgentx86 TjIpSys.dll YLUSBTEL.dll cellphone_agentdatabase.dat eyeBeam.exe eyeCall.dll eyeLook.dll gif ipwio.dll psvince.dll ugstgs.exe vincent_qiu_softphone_luncher.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -135,6 +140,7 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AiRemoveRegComponent">
     <ROW RemoveReg="SoftphoneAgent" InstallMode="2" Condition="(AI_CLEAN_RESOURCES_UNINSTALL = &quot;1&quot;) AND (NOT UPGRADINGPRODUCTCODE)"/>
+    <ROW RemoveReg="SoftphoneAgentx86" InstallMode="2" Condition="(AI_CLEAN_RESOURCES_UNINSTALL = &quot;1&quot;) AND (NOT UPGRADINGPRODUCTCODE)"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
     <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="..\Finished_Setup_Files" PackageFileName="setup" Languages="en" InstallationType="2" CabsLocation="1" CompressCabs="false" UseLzma="true" LzmaMethod="2" LzmaCompressionLevel="4" PackageType="1" FilesInsideExe="true" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" UseLargeSchema="true" ExeName="setup" UACExecutionLevel="2"/>
@@ -236,6 +242,7 @@
     <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER_2"/>
     <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
     <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
     <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
     <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]"/>
     <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
@@ -252,6 +259,7 @@
     <ROW Action="StopProcess_Eyebeam" Type="1" Source="aicustact.dll" Target="StopProcess" Options="3" AdditionalSeq="AI_DATA_SETTER_1"/>
     <ROW Action="StopProcess_SoftphoneAgent" Type="1" Source="aicustact.dll" Target="StopProcess" Options="3" AdditionalSeq="AI_DATA_SETTER"/>
     <ROW Action="StopProcess_SoftphoneAgent_NEW" Type="1" Source="aicustact.dll" Target="StopProcess" AdditionalSeq="AI_DATA_SETTER_4"/>
+    <ROW Action="UninstallOldPacket" Type="98" Source="ProgramFilesFolder" Target="[ProgramFilesFolder]\Softphone\unins000.exe"/>
     <ROW Action="vincent_qiu_softphone_luncher.exe" Type="18" Source="vincent_qiu_softphone_luncher.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiEnvComponent">
@@ -262,8 +270,8 @@
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
-    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
-    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="55"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="54"/>
     <ROW Action="AI_AppSearchEx" Sequence="102"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
@@ -274,16 +282,18 @@
     <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
-    <ROW Action="StopProcess_SoftphoneAgent" Sequence="1604"/>
-    <ROW Action="AI_DATA_SETTER" Sequence="1603"/>
-    <ROW Action="StopProcess_Eyebeam" Sequence="1602"/>
-    <ROW Action="AI_DATA_SETTER_1" Sequence="1601"/>
     <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
     <ROW Action="AI_DATA_SETTER_2" Sequence="3997"/>
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
-    <ROW Action="StopProcess_SoftphoneAgent_NEW" Sequence="1606"/>
-    <ROW Action="AI_DATA_SETTER_4" Sequence="1605"/>
     <ROW Action="AI_AiRemoveRegsImmediate" Sequence="2599"/>
+    <ROW Action="StopProcess_Eyebeam" Sequence="53"/>
+    <ROW Action="AI_DATA_SETTER_1" Sequence="52"/>
+    <ROW Action="StopProcess_SoftphoneAgent" Sequence="57"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="56"/>
+    <ROW Action="StopProcess_SoftphoneAgent_NEW" Sequence="59"/>
+    <ROW Action="AI_DATA_SETTER_4" Sequence="58"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="51"/>
+    <ROW Action="UninstallOldPacket" Sequence="1201"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -305,15 +315,32 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
     <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="[ProductVersion]" Component_="AI_CustomARPName"/>
+    <ROW Registry="EstimatedSize" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="EstimatedSize" Value="#0" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
     <ROW Registry="Path" Root="2" Key="SOFTWARE\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
     <ROW Registry="ProductName_1" Root="2" Key="SOFTWARE\[Manufacturer]\[ProductName]" Name="*" Component_="ProductName"/>
+    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
     <ROW Registry="Run" Root="2" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" Name="+" Component_="Run"/>
     <ROW Registry="SoftphoneAgent" Root="2" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" Name="Softphone Agent" Value="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]" Component_="SoftphoneAgent"/>
     <ROW Registry="SoftphoneAgent1" Root="2" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" Name="Softphone Agent x86" Value="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]" Component_="SoftphoneAgentx86"/>
+    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallPath" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
     <ROW Registry="Version" Root="2" Key="SOFTWARE\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+    <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#1" Component_="AI_CustomARPName"/>
+    <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#2" Component_="AI_CustomARPName"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRemoveRegComponent">
     <ROW RemoveRegistry="SoftphoneAgent" Root="2" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" Name="Softphone Agent" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe"/>
+    <ROW RemoveRegistry="SoftphoneAgentx86" Root="2" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" Name="Softphone Agent x86" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="Softphone" Directory_="SHORTCUTDIR" Name="Softph~2|Softphone" Component_="eyeBeam.exe" Target="[#eyeBeam.exe]" Description="Softphone" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>

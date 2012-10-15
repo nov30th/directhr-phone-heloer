@@ -16,7 +16,7 @@
 ; (生成新的GUID，点击 工具|在IDE中生成GUID。)
 PrivilegesRequired=admin
 
-signtool=digitsign
+;signtool=digitsign
 ;sign /n $qzhongjie qiu$q /d "Direct HR Softphone Agent" /du "http://www.directhr.net" /t http://timestamp.verisign.com/scripts/timstamp.dll $f
 
 
