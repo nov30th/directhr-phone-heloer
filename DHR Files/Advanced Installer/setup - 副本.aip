@@ -30,10 +30,10 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
-    <ROW Property="ProductCode" Value="1033:{53F72BBF-2D30-455C-A006-D204C32F4481} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{C2F45F01-ACC6-4427-8A27-8B80BB525452} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="DirectHR Softphone Agent" ValueLocId="*"/>
-    <ROW Property="ProductVersion" Value="2.0.0.1" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.0.2.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
