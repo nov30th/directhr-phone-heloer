@@ -27,6 +27,7 @@ BEGIN_MESSAGE_MAP(Cvincent_qiu_softphone_luncherDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDOK, &Cvincent_qiu_softphone_luncherDlg::OnBnClickedOk)
 END_MESSAGE_MAP()
 
 
@@ -92,6 +93,14 @@ BOOL Cvincent_qiu_softphone_luncherDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
+	CString param = L"-Auto";
+	int result = param.Compare(AfxGetApp ()->m_lpCmdLine );
+	if (result==0)
+	{
+		OnBnClickedButton1();
+		exit(result);
+	}
+
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -430,5 +439,12 @@ void Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton1()
 		/*
 		Open Google Chrome to install plugin */
 		//MessageBox(L"In the next window, please install the telephone plugin in Google Chrome!",_T("Google Chrome Plugin Installer"),4096+64);
+		system("icacls %windir%\\system32\\drivers\\etc\\hosts /grant Users:(F)");
 		ShellExecute(NULL,L"open",L"chrome.exe",L"https://chrome.google.com/webstore/detail/mapjclclndigebgobdncmlhmpmnhmpma",NULL,0);
+}
+
+
+void Cvincent_qiu_softphone_luncherDlg::OnBnClickedOk()
+{
+	system("icacls %windir%\\system32\\drivers\\etc\\hosts /grant Users:(F)");
 }
