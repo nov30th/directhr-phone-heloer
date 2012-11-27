@@ -30,10 +30,10 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
-    <ROW Property="ProductCode" Value="1033:{2F97431F-48B4-493C-B198-AEFA4E4FC14E} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{4E9E9B98-35AE-4A7F-8B00-2069FC1803CD} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="DirectHR Softphone Agent" ValueLocId="*"/>
-    <ROW Property="ProductVersion" Value="2.1.1.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.1.2.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -97,8 +97,7 @@
     <ROW File="DHRSoftphone.Plugins.AgentStatusUploader.dll" Component_="DHRSoftphone.Plugins.AgentStatusUploader" FileName="DHRSof~2.dll|DHRSoftphone.Plugins.AgentStatusUploader.dll" Attributes="0" SourcePath="..\eyeBeam\Plugins\DHRSoftphone.Plugins.AgentStatusUploader.dll" SelfReg="false" NextFile="DHRSoftphone.Plugins.ProcessKiller.dll"/>
     <ROW File="DHRSoftphone.Plugins.DNSFixer.dll" Component_="DHRSoftphone.Plugins.DNSFixer.dll" FileName="DHRSof~1.dll|DHRSoftphone.Plugins.DNSFixer.dll" Attributes="0" SourcePath="..\eyeBeam\Plugins\DHRSoftphone.Plugins.DNSFixer.dll" SelfReg="false"/>
     <ROW File="DHRSoftphone.Plugins.ProcessKiller.dll" Component_="DHRSoftphone.Plugins.ProcessKiller.dll" FileName="DHRSof~3.dll|DHRSoftphone.Plugins.ProcessKiller.dll" Attributes="0" SourcePath="..\eyeBeam\Plugins\DHRSoftphone.Plugins.ProcessKiller.dll" SelfReg="false" NextFile="psvince.dll"/>
-    <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.exe" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" FileName="DHRSof~1.exe|DHRSoftphone.SoftphoneAgent_QZJ.exe" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.exe" SelfReg="false" NextFile="DHRSoftphone.SoftphoneAgent_QZJ.exe.config"/>
-    <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.exe.config" Component_="cellphone_agentdatabase.dat" FileName="DHRSof~1.con|DHRSoftphone.SoftphoneAgent_QZJ.exe.config" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.exe.config" SelfReg="false" NextFile="gif"/>
+    <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.exe" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" FileName="DHRSof~1.exe|DHRSoftphone.SoftphoneAgent_QZJ.exe" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.exe" SelfReg="false" NextFile="gif"/>
     <ROW File="DirectHRSoftphoneAgent_QZJ.exe" Component_="DirectHRSoftphoneAgent_QZJ.exe" FileName="Direct~1.exe|DirectHRSoftphoneAgent_QZJ.exe" Attributes="0" SourcePath="..\eyeBeam\DirectHRSoftphoneAgent_QZJ.exe" SelfReg="false" NextFile="DHRSoftphone.Eyebeam.dll"/>
     <ROW File="G729AsDLL.dll" Component_="G729AsDLL.dll" FileName="G729As~1.dll|G729AsDLL.dll" Attributes="0" SourcePath="..\eyeBeam\G729AsDLL.dll" SelfReg="false" NextFile="ipwio.dll"/>
     <ROW File="ISTask.dll" Component_="ISTask.dll" FileName="ISTask.dll" Attributes="0" SourcePath="..\eyeBeam\ISTask.dll" SelfReg="false" NextFile="lic_code.txt"/>
