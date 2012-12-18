@@ -30,10 +30,10 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
-    <ROW Property="ProductCode" Value="1033:{8334DB8D-CB30-49BE-BB3E-8538221EAE77} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{A1B14180-4F82-47CE-A0E9-677244D0199D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="DirectHR Softphone Agent" ValueLocId="*"/>
-    <ROW Property="ProductVersion" Value="2.2.0.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.2.1" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -73,6 +73,7 @@
     <ROW Component="SoftphoneAgent" ComponentId="{E1EA7238-165C-4F67-ADC2-8AAC0BB0445D}" Directory_="APPDIR" Attributes="260" KeyPath="SoftphoneAgent"/>
     <ROW Component="SoftphoneAgentx86" ComponentId="{D57EFE41-94F7-4A36-B191-76AABAA70A73}" Directory_="APPDIR" Attributes="4" KeyPath="SoftphoneAgent1"/>
     <ROW Component="TjIpSys.dll" ComponentId="{69A78975-546A-46D7-B640-BC52D3FB21AC}" Directory_="APPDIR" Attributes="0" KeyPath="TjIpSys.dll"/>
+    <ROW Component="WinPcap_4_1_2.exe" ComponentId="{2750D9DB-7416-4A3E-8E27-2873418B8B51}" Directory_="APPDIR" Attributes="0" KeyPath="WinPcap_4_1_2.exe"/>
     <ROW Component="YLUSBTEL.dll" ComponentId="{2A6E56F4-78C0-45BC-8FFF-917F2795306F}" Directory_="APPDIR" Attributes="0" KeyPath="YLUSBTEL.dll"/>
     <ROW Component="cellphone_agentdatabase.dat" ComponentId="{091A836D-F60F-4AC6-9A71-0445913A0C25}" Directory_="APPDIR" Attributes="0" KeyPath="cellphone_agentdatabase.dat" Type="0"/>
     <ROW Component="eyeBeam.exe" ComponentId="{50AE8046-0040-4EF3-9AC6-78D32B355E26}" Directory_="APPDIR" Attributes="0" KeyPath="eyeBeam.exe"/>
@@ -85,7 +86,7 @@
     <ROW Component="vincent_qiu_softphone_luncher.exe" ComponentId="{F675B04A-0CB2-40FA-86AC-72EEDA505C31}" Directory_="APPDIR" Attributes="0" KeyPath="vincent_qiu_softphone_luncher.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AEC_PC_DLL.dll AI_CustomARPName AI_ExePath BV32.dll DHRSoftphone.AgentExceptions.dll DHRSoftphone.DSUserControls.dll DHRSoftphone.Eyebeam.dll DHRSoftphone.IDHRSPPlugin.dll DHRSoftphone.Plugins.AgentStatusUploader DHRSoftphone.Plugins.DNSFixer.dll DHRSoftphone.Plugins.ProcessKiller.dll DHRSoftphone.SoftphoneAgent_QZJ.exe DhrMatchingUrlService.exe DirectHRSoftphoneAgent_QZJ.exe G729AsDLL.dll ISTask.dll PlantronicsDeviceEventSink.dll ProductInformation ProductName Run SHORTCUTDIR SoftphoneAgent SoftphoneAgentx86 TjIpSys.dll YLUSBTEL.dll cellphone_agentdatabase.dat eyeBeam.exe eyeCall.dll eyeLook.dll gif ipwio.dll psvince.dll ugstgs.exe vincent_qiu_softphone_luncher.exe"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AEC_PC_DLL.dll AI_CustomARPName AI_ExePath BV32.dll DHRSoftphone.AgentExceptions.dll DHRSoftphone.DSUserControls.dll DHRSoftphone.Eyebeam.dll DHRSoftphone.IDHRSPPlugin.dll DHRSoftphone.Plugins.AgentStatusUploader DHRSoftphone.Plugins.DNSFixer.dll DHRSoftphone.Plugins.ProcessKiller.dll DHRSoftphone.SoftphoneAgent_QZJ.exe DhrMatchingUrlService.exe DirectHRSoftphoneAgent_QZJ.exe G729AsDLL.dll ISTask.dll PlantronicsDeviceEventSink.dll ProductInformation ProductName Run SHORTCUTDIR SoftphoneAgent SoftphoneAgentx86 TjIpSys.dll WinPcap_4_1_2.exe YLUSBTEL.dll cellphone_agentdatabase.dat eyeBeam.exe eyeCall.dll eyeLook.dll gif ipwio.dll psvince.dll ugstgs.exe vincent_qiu_softphone_luncher.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -99,12 +100,13 @@
     <ROW File="DHRSoftphone.Plugins.DNSFixer.dll" Component_="DHRSoftphone.Plugins.DNSFixer.dll" FileName="DHRSof~1.dll|DHRSoftphone.Plugins.DNSFixer.dll" Attributes="0" SourcePath="..\eyeBeam\Plugins\DHRSoftphone.Plugins.DNSFixer.dll" SelfReg="false" NextFile="DhrMatchingUrlService.exe"/>
     <ROW File="DHRSoftphone.Plugins.ProcessKiller.dll" Component_="DHRSoftphone.Plugins.ProcessKiller.dll" FileName="DHRSof~3.dll|DHRSoftphone.Plugins.ProcessKiller.dll" Attributes="0" SourcePath="..\eyeBeam\Plugins\DHRSoftphone.Plugins.ProcessKiller.dll" SelfReg="false" NextFile="psvince.dll"/>
     <ROW File="DHRSoftphone.SoftphoneAgent_QZJ.exe" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" FileName="DHRSof~1.exe|DHRSoftphone.SoftphoneAgent_QZJ.exe" Attributes="0" SourcePath="..\eyeBeam\DHRSoftphone.SoftphoneAgent_QZJ.exe" SelfReg="false" NextFile="gif"/>
-    <ROW File="DhrMatchingUrlService.exe" Component_="DhrMatchingUrlService.exe" FileName="DhrMat~1.exe|DhrMatchingUrlService.exe" Attributes="0" SourcePath="..\eyeBeam\DhrMatchingUrlService.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="DhrMatchingUrlService.exe" Component_="DhrMatchingUrlService.exe" FileName="DhrMat~1.exe|DhrMatchingUrlService.exe" Attributes="0" SourcePath="..\eyeBeam\DhrMatchingUrlService.exe" SelfReg="false" NextFile="WinPcap_4_1_2.exe" DigSign="true"/>
     <ROW File="DirectHRSoftphoneAgent_QZJ.exe" Component_="DirectHRSoftphoneAgent_QZJ.exe" FileName="Direct~1.exe|DirectHRSoftphoneAgent_QZJ.exe" Attributes="0" SourcePath="..\eyeBeam\DirectHRSoftphoneAgent_QZJ.exe" SelfReg="false" NextFile="DHRSoftphone.Eyebeam.dll"/>
     <ROW File="G729AsDLL.dll" Component_="G729AsDLL.dll" FileName="G729As~1.dll|G729AsDLL.dll" Attributes="0" SourcePath="..\eyeBeam\G729AsDLL.dll" SelfReg="false" NextFile="ipwio.dll"/>
     <ROW File="ISTask.dll" Component_="ISTask.dll" FileName="ISTask.dll" Attributes="0" SourcePath="..\eyeBeam\ISTask.dll" SelfReg="false" NextFile="lic_code.txt"/>
     <ROW File="PlantronicsDeviceEventSink.dll" Component_="PlantronicsDeviceEventSink.dll" FileName="Plantr~1.dll|PlantronicsDeviceEventSink.dll" Attributes="0" SourcePath="..\eyeBeam\PlantronicsDeviceEventSink.dll" SelfReg="false" NextFile="DHRSoftphone.Plugins.AgentStatusUploader.dll"/>
     <ROW File="TjIpSys.dll" Component_="TjIpSys.dll" FileName="TjIpSys.dll" Attributes="0" SourcePath="..\eyeBeam\TjIpSys.dll" SelfReg="false" NextFile="ugstgs.exe"/>
+    <ROW File="WinPcap_4_1_2.exe" Component_="WinPcap_4_1_2.exe" FileName="WinPca~1.exe|WinPcap_4_1_2.exe" Attributes="0" SourcePath="..\eyeBeam\WinPcap_4_1_2.exe" SelfReg="false" DigSign="true"/>
     <ROW File="YLUSBTEL.dll" Component_="YLUSBTEL.dll" FileName="YLUSBTEL.dll" Attributes="0" SourcePath="..\eyeBeam\YLUSBTEL.dll" SelfReg="false" NextFile="DirectHRSoftphoneAgent_QZJ.exe"/>
     <ROW File="cellphone_agentdatabase.dat" Component_="cellphone_agentdatabase.dat" FileName="cellph~1.dat|cellphone_agentdatabase.dat" Attributes="0" SourcePath="..\eyeBeam\cellphone_agentdatabase.dat" SelfReg="false" NextFile="chromeplugin.html"/>
     <ROW File="chromeplugin.html" Component_="cellphone_agentdatabase.dat" FileName="chrome~1.htm|chrome plugin.html" Attributes="0" SourcePath="..\eyeBeam\chrome plugin.html" SelfReg="false" NextFile="DHRSoftphone.AgentExceptions.dll"/>
@@ -181,6 +183,7 @@
     <ROW Name="ResourceCleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ResourceCleaner.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+    <ROW Name="viewer.exe" SourcePath="&lt;AI_CUSTACTS&gt;viewer.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="WelcomeDlg" Control="WelcomeDlgDialogInitializer" Type="DialogInitializer" X="0" Y="0" Width="0" Height="0" Attributes="0" Order="-1" TextLocId="-" HelpLocId="-" ExtDataLocId="-"/>
@@ -249,6 +252,7 @@
     <ROW Action="AI_RunFinishActions" Type="1" Source="aicustact.dll" Target="RunFinishActions" WithoutSeq="true"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="LunchWinpcapInstaller1" Type="66" Source="viewer.exe" Target="&quot;[#WinPcap_4_1_2.exe]&quot;" Options="1"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]\Softphone"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]\Direct HR Softphone"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
@@ -265,16 +269,10 @@
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
-    <ROW Action="AI_ResolveKnownFolders" Sequence="55"/>
-    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="54"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="52"/>
     <ROW Action="AI_AppSearchEx" Sequence="102"/>
     <ROW Action="AI_AiRemoveRegsImmediate" Sequence="2599"/>
-    <ROW Action="StopProcess_Eyebeam" Sequence="53"/>
-    <ROW Action="AI_DATA_SETTER_1" Sequence="52"/>
-    <ROW Action="StopProcess_SoftphoneAgent" Sequence="57"/>
-    <ROW Action="AI_DATA_SETTER" Sequence="56"/>
-    <ROW Action="StopProcess_SoftphoneAgent_NEW" Sequence="59"/>
-    <ROW Action="AI_DATA_SETTER_4" Sequence="58"/>
     <ROW Action="AI_GetArpIconPath" Sequence="51"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
@@ -288,6 +286,12 @@
     <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
     <ROW Action="AI_DATA_SETTER_2" Sequence="3997"/>
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+    <ROW Action="StopProcess_Eyebeam" Sequence="1202"/>
+    <ROW Action="AI_DATA_SETTER_1" Sequence="1201"/>
+    <ROW Action="StopProcess_SoftphoneAgent" Sequence="1204"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="1203"/>
+    <ROW Action="StopProcess_SoftphoneAgent_NEW" Sequence="1206"/>
+    <ROW Action="AI_DATA_SETTER_4" Sequence="1205"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -296,7 +300,8 @@
     <ROW Action="AI_AppSearchEx" Sequence="102"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
-    <ROW Action="vincent_qiu_softphone_luncher.exe" Condition="( NOT Installed )" Sequence="1301"/>
+    <ROW Action="vincent_qiu_softphone_luncher.exe" Condition="( NOT Installed )" Sequence="1302"/>
+    <ROW Action="LunchWinpcapInstaller1" Condition="( ( NOT Installed ) OR ( Installed AND REMOVE &lt;&gt; &quot;ALL&quot; AND AI_INSTALL_MODE &lt;&gt; &quot;Remove&quot; ) )" Sequence="1301"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
     <ROW Condition="(AI_DOTNET40_SEARCH = &quot;#1&quot;) OR (AI_DOTNET45_SEARCH &gt;= &quot;4.5&quot;)" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_MINDOTNETVERSION]" DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
@@ -350,7 +355,7 @@
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
-    <ROW PrereqKey="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD" DisplayName=".NET Framework 4.0" VersionMin="4.0" SetupFileUrl="http://softphone.directhr.cn/dotnetfx40.exe" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2" Operator="1"/>
+    <ROW PrereqKey="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD" DisplayName=".NET Framework 4.0" VersionMin="4.0" SetupFileUrl="http://softphone.directhr.cn/dotnetfx40.exe" Location="1" ExactSize="0" Win9xVersions="Windows 9x/ME" WinNTVersions="Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6, Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2" Operator="1" Options="m"/>
     <ATTRIBUTE name="PrereqsOrder" value="D62CCA_449F_4EB4_AA2F_C4376D7FBDAD"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
