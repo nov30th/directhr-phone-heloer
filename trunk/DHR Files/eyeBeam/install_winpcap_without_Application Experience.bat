@@ -1,5 +1,6 @@
 @echo off
 echo Install Winpcap...
-net stop "Program Compatibility Assistant Service"
+color 0A
+echo NOTICE: Please click "Run the program without getting help" if Program Compatibility Assistant window shows.
+:install
 WinPcap_4_1_2.exe
-net start "Program Compatibility Assistant Service"
