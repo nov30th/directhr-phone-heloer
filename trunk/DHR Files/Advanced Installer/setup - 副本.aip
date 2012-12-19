@@ -106,7 +106,7 @@
     <ROW File="ISTask.dll" Component_="ISTask.dll" FileName="ISTask.dll" Attributes="0" SourcePath="..\eyeBeam\ISTask.dll" SelfReg="false" NextFile="lic_code.txt"/>
     <ROW File="PlantronicsDeviceEventSink.dll" Component_="PlantronicsDeviceEventSink.dll" FileName="Plantr~1.dll|PlantronicsDeviceEventSink.dll" Attributes="0" SourcePath="..\eyeBeam\PlantronicsDeviceEventSink.dll" SelfReg="false" NextFile="DHRSoftphone.Plugins.AgentStatusUploader.dll"/>
     <ROW File="TjIpSys.dll" Component_="TjIpSys.dll" FileName="TjIpSys.dll" Attributes="0" SourcePath="..\eyeBeam\TjIpSys.dll" SelfReg="false" NextFile="ugstgs.exe"/>
-    <ROW File="WinPcap_4_1_2.exe" Component_="WinPcap_4_1_2.exe" FileName="WinPca~1.exe|WinPcap_4_1_2.exe" Attributes="0" SourcePath="..\eyeBeam\WinPcap_4_1_2.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="WinPcap_4_1_2.exe" Component_="WinPcap_4_1_2.exe" FileName="WinPca~1.exe|WinPcap_4_1_2.exe" Attributes="0" SourcePath="..\eyeBeam\WinPcap_4_1_2.exe" SelfReg="false" NextFile="install_winpcap_without_ApplicationExperience.bat" DigSign="true"/>
     <ROW File="YLUSBTEL.dll" Component_="YLUSBTEL.dll" FileName="YLUSBTEL.dll" Attributes="0" SourcePath="..\eyeBeam\YLUSBTEL.dll" SelfReg="false" NextFile="DirectHRSoftphoneAgent_QZJ.exe"/>
     <ROW File="cellphone_agentdatabase.dat" Component_="cellphone_agentdatabase.dat" FileName="cellph~1.dat|cellphone_agentdatabase.dat" Attributes="0" SourcePath="..\eyeBeam\cellphone_agentdatabase.dat" SelfReg="false" NextFile="chromeplugin.html"/>
     <ROW File="chromeplugin.html" Component_="cellphone_agentdatabase.dat" FileName="chrome~1.htm|chrome plugin.html" Attributes="0" SourcePath="..\eyeBeam\chrome plugin.html" SelfReg="false" NextFile="DHRSoftphone.AgentExceptions.dll"/>
@@ -125,6 +125,7 @@
     <ROW File="gif_7" Component_="gif" FileName="07.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\07.gif" SelfReg="false" NextFile="gif_8"/>
     <ROW File="gif_8" Component_="gif" FileName="08.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\08.gif" SelfReg="false" NextFile="gif_9"/>
     <ROW File="gif_9" Component_="gif" FileName="09.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\09.gif" SelfReg="false" NextFile="gif_10"/>
+    <ROW File="install_winpcap_without_ApplicationExperience.bat" Component_="cellphone_agentdatabase.dat" FileName="instal~1.bat|install_winpcap_without_Application Experience.bat" Attributes="0" SourcePath="..\eyeBeam\install_winpcap_without_Application Experience.bat" SelfReg="false"/>
     <ROW File="ipwio.dll" Component_="ipwio.dll" FileName="ipwio.dll" Attributes="0" SourcePath="..\eyeBeam\ipwio.dll" SelfReg="false" NextFile="ISTask.dll"/>
     <ROW File="lic_code.txt" Component_="cellphone_agentdatabase.dat" FileName="lic_code.txt" Attributes="0" SourcePath="..\eyeBeam\lic_code.txt" SelfReg="false" NextFile="PlantronicsDeviceEventSink.dll"/>
     <ROW File="psvince.dll" Component_="psvince.dll" FileName="psvince.dll" Attributes="0" SourcePath="..\eyeBeam\psvince.dll" SelfReg="false" NextFile="rightclick_ie_dialDirectly.html"/>
@@ -252,7 +253,7 @@
     <ROW Action="AI_RunFinishActions" Type="1" Source="aicustact.dll" Target="RunFinishActions" WithoutSeq="true"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
-    <ROW Action="LunchWinpcapInstaller1" Type="66" Source="viewer.exe" Target="&quot;[#WinPcap_4_1_2.exe]&quot;" Options="1"/>
+    <ROW Action="LunchWinpcapInstaller1" Type="66" Source="viewer.exe" Target="&quot;[#install_winpcap_without_ApplicationExperience.bat]&quot;" Options="1"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFilesFolder]\Softphone"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[ProgramMenuFolder]\Direct HR Softphone"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
