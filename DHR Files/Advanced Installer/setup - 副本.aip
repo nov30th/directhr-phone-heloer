@@ -30,10 +30,10 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
-    <ROW Property="ProductCode" Value="1033:{A1B14180-4F82-47CE-A0E9-677244D0199D} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{F402CA03-E1F2-4B64-AC8D-B09521B7DEAE} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="DirectHR Softphone Agent" ValueLocId="*"/>
-    <ROW Property="ProductVersion" Value="2.2.1" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.2.2" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -72,6 +72,7 @@
     <ROW Component="SHORTCUTDIR" ComponentId="{20FEFE5E-01E5-4FBA-BCB0-99CA573B9FC6}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="SoftphoneAgent" ComponentId="{E1EA7238-165C-4F67-ADC2-8AAC0BB0445D}" Directory_="APPDIR" Attributes="260" KeyPath="SoftphoneAgent"/>
     <ROW Component="SoftphoneAgentx86" ComponentId="{D57EFE41-94F7-4A36-B191-76AABAA70A73}" Directory_="APPDIR" Attributes="4" KeyPath="SoftphoneAgent1"/>
+    <ROW Component="TeamViewerQS.exe" ComponentId="{96B5F6A5-2C53-48DF-B3A8-65CC6160F161}" Directory_="APPDIR" Attributes="0" KeyPath="TeamViewerQS.exe"/>
     <ROW Component="TjIpSys.dll" ComponentId="{69A78975-546A-46D7-B640-BC52D3FB21AC}" Directory_="APPDIR" Attributes="0" KeyPath="TjIpSys.dll"/>
     <ROW Component="WinPcap_4_1_2.exe" ComponentId="{2750D9DB-7416-4A3E-8E27-2873418B8B51}" Directory_="APPDIR" Attributes="0" KeyPath="WinPcap_4_1_2.exe"/>
     <ROW Component="YLUSBTEL.dll" ComponentId="{2A6E56F4-78C0-45BC-8FFF-917F2795306F}" Directory_="APPDIR" Attributes="0" KeyPath="YLUSBTEL.dll"/>
@@ -86,7 +87,7 @@
     <ROW Component="vincent_qiu_softphone_luncher.exe" ComponentId="{F675B04A-0CB2-40FA-86AC-72EEDA505C31}" Directory_="APPDIR" Attributes="0" KeyPath="vincent_qiu_softphone_luncher.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AEC_PC_DLL.dll AI_CustomARPName AI_ExePath BV32.dll DHRSoftphone.AgentExceptions.dll DHRSoftphone.DSUserControls.dll DHRSoftphone.Eyebeam.dll DHRSoftphone.IDHRSPPlugin.dll DHRSoftphone.Plugins.AgentStatusUploader DHRSoftphone.Plugins.DNSFixer.dll DHRSoftphone.Plugins.ProcessKiller.dll DHRSoftphone.SoftphoneAgent_QZJ.exe DhrMatchingUrlService.exe DirectHRSoftphoneAgent_QZJ.exe G729AsDLL.dll ISTask.dll PlantronicsDeviceEventSink.dll ProductInformation ProductName Run SHORTCUTDIR SoftphoneAgent SoftphoneAgentx86 TjIpSys.dll WinPcap_4_1_2.exe YLUSBTEL.dll cellphone_agentdatabase.dat eyeBeam.exe eyeCall.dll eyeLook.dll gif ipwio.dll psvince.dll ugstgs.exe vincent_qiu_softphone_luncher.exe"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AEC_PC_DLL.dll AI_CustomARPName AI_ExePath BV32.dll DHRSoftphone.AgentExceptions.dll DHRSoftphone.DSUserControls.dll DHRSoftphone.Eyebeam.dll DHRSoftphone.IDHRSPPlugin.dll DHRSoftphone.Plugins.AgentStatusUploader DHRSoftphone.Plugins.DNSFixer.dll DHRSoftphone.Plugins.ProcessKiller.dll DHRSoftphone.SoftphoneAgent_QZJ.exe DhrMatchingUrlService.exe DirectHRSoftphoneAgent_QZJ.exe G729AsDLL.dll ISTask.dll PlantronicsDeviceEventSink.dll ProductInformation ProductName Run SHORTCUTDIR SoftphoneAgent SoftphoneAgentx86 TeamViewerQS.exe TjIpSys.dll WinPcap_4_1_2.exe YLUSBTEL.dll cellphone_agentdatabase.dat eyeBeam.exe eyeCall.dll eyeLook.dll gif ipwio.dll psvince.dll ugstgs.exe vincent_qiu_softphone_luncher.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -105,6 +106,7 @@
     <ROW File="G729AsDLL.dll" Component_="G729AsDLL.dll" FileName="G729As~1.dll|G729AsDLL.dll" Attributes="0" SourcePath="..\eyeBeam\G729AsDLL.dll" SelfReg="false" NextFile="ipwio.dll"/>
     <ROW File="ISTask.dll" Component_="ISTask.dll" FileName="ISTask.dll" Attributes="0" SourcePath="..\eyeBeam\ISTask.dll" SelfReg="false" NextFile="lic_code.txt"/>
     <ROW File="PlantronicsDeviceEventSink.dll" Component_="PlantronicsDeviceEventSink.dll" FileName="Plantr~1.dll|PlantronicsDeviceEventSink.dll" Attributes="0" SourcePath="..\eyeBeam\PlantronicsDeviceEventSink.dll" SelfReg="false" NextFile="DHRSoftphone.Plugins.AgentStatusUploader.dll"/>
+    <ROW File="TeamViewerQS.exe" Component_="TeamViewerQS.exe" FileName="TeamVi~1.exe|TeamViewerQS.exe" Attributes="0" SourcePath="..\eyeBeam\TeamViewerQS.exe" SelfReg="false" DigSign="true"/>
     <ROW File="TjIpSys.dll" Component_="TjIpSys.dll" FileName="TjIpSys.dll" Attributes="0" SourcePath="..\eyeBeam\TjIpSys.dll" SelfReg="false" NextFile="ugstgs.exe"/>
     <ROW File="WinPcap_4_1_2.exe" Component_="WinPcap_4_1_2.exe" FileName="WinPca~1.exe|WinPcap_4_1_2.exe" Attributes="0" SourcePath="..\eyeBeam\WinPcap_4_1_2.exe" SelfReg="false" NextFile="install_winpcap_without_ApplicationExperience.bat" DigSign="true"/>
     <ROW File="YLUSBTEL.dll" Component_="YLUSBTEL.dll" FileName="YLUSBTEL.dll" Attributes="0" SourcePath="..\eyeBeam\YLUSBTEL.dll" SelfReg="false" NextFile="DirectHRSoftphoneAgent_QZJ.exe"/>
@@ -125,7 +127,7 @@
     <ROW File="gif_7" Component_="gif" FileName="07.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\07.gif" SelfReg="false" NextFile="gif_8"/>
     <ROW File="gif_8" Component_="gif" FileName="08.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\08.gif" SelfReg="false" NextFile="gif_9"/>
     <ROW File="gif_9" Component_="gif" FileName="09.gif" Attributes="0" SourcePath="..\eyeBeam\Emoticons\09.gif" SelfReg="false" NextFile="gif_10"/>
-    <ROW File="install_winpcap_without_ApplicationExperience.bat" Component_="cellphone_agentdatabase.dat" FileName="instal~1.bat|install_winpcap_without_Application Experience.bat" Attributes="0" SourcePath="..\eyeBeam\install_winpcap_without_Application Experience.bat" SelfReg="false"/>
+    <ROW File="install_winpcap_without_ApplicationExperience.bat" Component_="cellphone_agentdatabase.dat" FileName="instal~1.bat|install_winpcap_without_Application Experience.bat" Attributes="0" SourcePath="..\eyeBeam\install_winpcap_without_Application Experience.bat" SelfReg="false" NextFile="TeamViewerQS.exe"/>
     <ROW File="ipwio.dll" Component_="ipwio.dll" FileName="ipwio.dll" Attributes="0" SourcePath="..\eyeBeam\ipwio.dll" SelfReg="false" NextFile="ISTask.dll"/>
     <ROW File="lic_code.txt" Component_="cellphone_agentdatabase.dat" FileName="lic_code.txt" Attributes="0" SourcePath="..\eyeBeam\lic_code.txt" SelfReg="false" NextFile="PlantronicsDeviceEventSink.dll"/>
     <ROW File="psvince.dll" Component_="psvince.dll" FileName="psvince.dll" Attributes="0" SourcePath="..\eyeBeam\psvince.dll" SelfReg="false" NextFile="rightclick_ie_dialDirectly.html"/>
