@@ -30,10 +30,10 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
-    <ROW Property="ProductCode" Value="1033:{6FD9C0DC-25AD-4F23-AAC1-F3D0C0B30AA6} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{065E28C1-B584-42D8-99CD-0866AAE14D4E} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="DirectHR Softphone Agent" ValueLocId="*"/>
-    <ROW Property="ProductVersion" Value="2.2.4" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.2.5" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -345,6 +345,8 @@
     <ROW RemoveRegistry="SoftphoneAgentx86" Root="2" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" Name="Softphone Agent x86" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="MatchingClient" Directory_="DesktopFolder" Name="Matchi~1|Matching Client" Component_="DhrMatchingUrlService.exe" Target="[#DhrMatchingUrlService.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="MatchingClient_1" Directory_="SHORTCUTDIR" Name="Matchi~1|Matching Client" Component_="DhrMatchingUrlService.exe" Target="[#DhrMatchingUrlService.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
     <ROW Shortcut="Softphone" Directory_="SHORTCUTDIR" Name="Softph~2|Softphone" Component_="eyeBeam.exe" Target="[#eyeBeam.exe]" Description="Softphone" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
     <ROW Shortcut="SoftphoneAgent" Directory_="SHORTCUTDIR" Name="Softph~1|Softphone Agent" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" Target="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]" Description="Softphone Agent" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
     <ROW Shortcut="SoftphoneAgent_1" Directory_="DesktopFolder" Name="Softph~1|Softphone Agent" Component_="DHRSoftphone.SoftphoneAgent_QZJ.exe" Target="[#DHRSoftphone.SoftphoneAgent_QZJ.exe]" Description="Softphone Agent" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
