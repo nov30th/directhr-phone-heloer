@@ -30,10 +30,10 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
-    <ROW Property="ProductCode" Value="1033:{B0334499-97E4-4E16-BDE0-0B3FB8D229F0} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{B5BC25C8-942E-4F3F-88AC-5BEA6CD49DB1} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="DirectHR Softphone Agent" ValueLocId="*"/>
-    <ROW Property="ProductVersion" Value="2.3.2" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.3.4" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -152,7 +152,7 @@
     <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
-    <ROW TimeStampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" SignerDescription="Softphone Agent" DescriptionUrl="http://softphone.directhr.cn" SignOptions="7" SignTool="0" Thumbprint="e762df92a9c179f1951750c96cd0ddf799408a18 Subject: Direct HR (China) Company Limited&#10;Issuer: StartCom Class 3 Primary Intermediate Object CA&#10;Valid from 02/20/2013 to 02/21/2016"/>
+    <ROW TimeStampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" SignerDescription="Softphone Agent" DescriptionUrl="http://softphone.directhr.cn" SignOptions="7" SignTool="0" Thumbprint="e762df92a9c179f1951750c96cd0ddf799408a18 Subject: Direct HR (China) Company Limited&#10;Issuer: StartCom Class 3 Primary Intermediate Object CA&#10;Valid from 02/20/2013 to 02/02/2016"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
