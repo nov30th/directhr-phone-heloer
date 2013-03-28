@@ -36,4 +36,3 @@ echo Can not found driver package, please contact v.qiu@directhr.cn!
 pause >nul
 
 :end
-pause
