@@ -18,16 +18,19 @@ goto end
 @REM x64
 echo Installing x64 driver...
 if not exist Drivers\x64\qzjndis.inf goto error
-netcfg.exe -v -u "dhr_qzjndis" >nul
-netcfg.exe -l Drivers\x64\qzjndis.inf -c s -i "dhr_qzjndis" >nul
+Drivers\x64\netcfg.exe -v -u "dhr_qzjndis" >nul
+Drivers\x64\netcfg.exe -l Drivers\x64\qzjndis.inf -c s -i "dhr_qzjndis" >nul
 goto end
 
 :x86
 @REM x86
 echo Installing x86 driver...
 if not exist Drivers\x86\qzjndis.inf goto error
-netcfg.exe -v -u "dhr_qzjndis" >nul
-netcfg.exe -l Drivers\x86\qzjndis.inf -c s -i "dhr_qzjndis" >nul
+echo PLEASE NOTICE THAT THE DRIVER HAVEN'T BEEN TEST IN NON-X64 MODE!
+echo ANY PROBLEMS PLEASE FEEDBACK TO v.qiu@directhr.cn
+Drivers\x86\netcfg.exe -v -u "dhr_qzjndis" >nul
+Drivers\x86\netcfg.exe -l Drivers\x86\qzjndis.inf -c s -i "dhr_qzjndis" >nul
+pause
 goto end
 
 :error

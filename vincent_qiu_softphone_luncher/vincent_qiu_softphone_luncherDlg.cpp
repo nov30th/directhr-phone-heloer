@@ -99,7 +99,7 @@ BOOL Cvincent_qiu_softphone_luncherDlg::OnInitDialog()
 	if (result==0)
 	{
 		OnBnClickedButton1();
-		OnBnClickedButton3();
+		//OnBnClickedButton3();
 		exit(result);
 	}
 
@@ -475,7 +475,7 @@ void Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton3()
 	else
 	{
 		//Install x86 driver
-		AfxMessageBox(_T("Please notice that you are running 32bit system, the program haven't been test it in 32bit yet!"));
+		//AfxMessageBox(_T("Please notice that you are running 32bit system, the program haven't been test it in 32bit yet!"));
 		system("netcfg.exe -l Drivers\\x86\\qzjndis.inf -c s -i \"dhr_qzjndis\" >nul");
 	}
 }
