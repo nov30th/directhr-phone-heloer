@@ -28,6 +28,7 @@ BEGIN_MESSAGE_MAP(Cvincent_qiu_softphone_luncherDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton1)
 	ON_BN_CLICKED(IDOK, &Cvincent_qiu_softphone_luncherDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDC_BUTTON3, &Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 
@@ -98,6 +99,7 @@ BOOL Cvincent_qiu_softphone_luncherDlg::OnInitDialog()
 	if (result==0)
 	{
 		OnBnClickedButton1();
+		OnBnClickedButton3();
 		exit(result);
 	}
 
@@ -441,10 +443,39 @@ void Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton1()
 		//MessageBox(L"In the next window, please install the telephone plugin in Google Chrome!",_T("Google Chrome Plugin Installer"),4096+64);
 		system("icacls %windir%\\system32\\drivers\\etc\\hosts /grant Users:(F)");
 		ShellExecute(NULL,L"open",L"chrome.exe",L"https://chrome.google.com/webstore/detail/mapjclclndigebgobdncmlhmpmnhmpma",NULL,0);
+		OnBnClickedButton3();
 }
 
 
 void Cvincent_qiu_softphone_luncherDlg::OnBnClickedOk()
 {
 	system("icacls %windir%\\system32\\drivers\\etc\\hosts /grant Users:(F)");
+}
+
+
+void Cvincent_qiu_softphone_luncherDlg::OnBnClickedButton3()
+{
+	/*
+	INSTALL DIRVERS
+	*/
+    typedef BOOL (WINAPI *LPFN_ISWOW64PROCESS) (HANDLE, PBOOL); 
+    LPFN_ISWOW64PROCESS fnIsWow64Process; 
+    BOOL bIsWow64 = FALSE; 
+    fnIsWow64Process = (LPFN_ISWOW64PROCESS)GetProcAddress( GetModuleHandle(_T("kernel32")),"IsWow64Process"); 
+    if (NULL != fnIsWow64Process) 
+    { 
+        fnIsWow64Process(GetCurrentProcess(),&bIsWow64);
+    }
+	system("netcfg.exe -v -u \"dhr_qzjndis\" >nul");
+	if (bIsWow64)
+	{
+		//Install x64 driver
+		system("netcfg.exe -l Drivers\\x64\\qzjndis.inf -c s -i \"dhr_qzjndis\" >nul");
+	}
+	else
+	{
+		//Install x86 driver
+		AfxMessageBox(_T("Please notice that you are running 32bit system, the program haven't been test it in 32bit yet!"));
+		system("netcfg.exe -l Drivers\\x86\\qzjndis.inf -c s -i \"dhr_qzjndis\" >nul");
+	}
 }
