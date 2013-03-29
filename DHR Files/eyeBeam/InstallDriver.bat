@@ -17,6 +17,8 @@ goto end
 :x64
 @REM x64
 echo Installing x64 driver...
+echo If 'Windows Security' dialog comes, select 'Alway trust ...' and Click 'Install'...
+echo This process may take one minute.
 if not exist Drivers\x64\qzjndis.inf goto error
 Drivers\x64\netcfg.exe -v -u "dhr_qzjndis" >nul
 Drivers\x64\netcfg.exe -l Drivers\x64\qzjndis.inf -c s -i "dhr_qzjndis" >nul
@@ -25,6 +27,8 @@ goto end
 :x86
 @REM x86
 echo Installing x86 driver...
+echo If 'Windows Security' dialog comes, select 'Alway trust ...' and Click 'Install'...
+echo This process may take one minute.
 if not exist Drivers\x86\qzjndis.inf goto error
 echo PLEASE NOTICE THAT THE DRIVER HAVEN'T BEEN TEST IN NON-X64 MODE!
 echo ANY PROBLEMS PLEASE FEEDBACK TO v.qiu@directhr.cn
