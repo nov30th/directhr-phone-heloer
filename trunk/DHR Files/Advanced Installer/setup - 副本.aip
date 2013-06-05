@@ -26,10 +26,10 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="DirectHR" ValueLocId="*"/>
-    <ROW Property="ProductCode" Value="1033:{A4BCCA79-4D08-437A-94E4-F8AFD1C89A02} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{97A92EF6-9E36-447E-A623-34057A76400A} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Softphone Agent" ValueLocId="*"/>
-    <ROW Property="ProductVersion" Value="3.2.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="3.3.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{1F7E2FB0-8C96-4848-938D-4A3E0C1389DD}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
