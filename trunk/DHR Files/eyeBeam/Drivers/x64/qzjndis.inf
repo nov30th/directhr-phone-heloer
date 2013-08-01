@@ -15,7 +15,7 @@ CatalogFile     = qzjndis.cat
 
 Provider        = %DHR%
 
-DriverVer=06/05/2013,16.6.42.787
+DriverVer=08/01/2013,21.50.22.24
 
 
 [Manufacturer]
